@@ -4,9 +4,9 @@ const searchTerm = document.querySelector('[data-js="search-term"]');
 let timer;
 searchTerm.addEventListener('keyup', search);
 
-function search(event) {
+function search() {
   if (event && event.keyCode === 13) {
-    const searchQuery = searchTerm.value;
+    const searchQuery = this.value;
 
     clearTimeout(timer);
 
